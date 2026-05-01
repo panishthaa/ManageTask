@@ -1,0 +1,43 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+:root {
+  --background: #f8fafc;
+  --foreground: #0f172a;
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: var(--font-sans), ui-sans-serif, system-ui, sans-serif;
+}
+
+@layer base {
+  * {
+    @apply border-slate-200;
+  }
+}
+
+.glass {
+  @apply bg-white/70 backdrop-blur-md border border-white/20;
+}
+
+.btn-primary {
+  @apply bg-indigo-600 text-white hover:bg-indigo-700 px-4 py-2 rounded-lg transition-all active:scale-95 disabled:opacity-50 disabled:active:scale-100 font-medium;
+}
+
+.btn-secondary {
+  @apply bg-white text-slate-700 border border-slate-200 hover:bg-slate-50 px-4 py-2 rounded-lg transition-all active:scale-95 disabled:opacity-50 disabled:active:scale-100 font-medium;
+}
+
+.card {
+  @apply bg-white rounded-xl border border-slate-200 shadow-sm overflow-hidden;
+}
+
+.input {
+  @apply w-full px-4 py-2 bg-slate-50 border border-slate-200 rounded-lg focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-500 outline-none transition-all;
+}
